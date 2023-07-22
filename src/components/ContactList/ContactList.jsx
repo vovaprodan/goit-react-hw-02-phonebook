@@ -1,10 +1,9 @@
 import React from "react";
 
-export const ContactList  = ({ filterContacts}) => {
+export const ContactList  = ({ data }) => {
     return <ul>
           {
-            filterContacts.map(contact => {
-              console.log(contact)
+            data.map(contact => {
              return <li key={contact.id}>
                 <p>{contact.name}</p>
                 <p>{contact.password}</p>
