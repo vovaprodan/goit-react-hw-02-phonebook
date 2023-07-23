@@ -1,12 +1,14 @@
 import React from "react";
+import css from './ContactList.module.css'
 
-export const ContactList  = ({ data }) => {
-    return <ul>
+export const ContactList  = ({ data, onDeleteConcat }) => {
+    return <ul className={css.list}>
           {
             data.map(contact => {
-             return <li key={contact.id}>
-                <p>{contact.name}</p>
-                <p>{contact.password}</p>
+             return <li className={css.item} key={contact.id}>
+                <p>{contact.name}:</p>
+               <p>{contact.password}</p>
+               <button className={css.button} type="button" onClick={() => onDeleteConcat(contact.id)}>Delete</button>
               </li>
             })
 }
