@@ -1,7 +1,9 @@
+import PropTypes from 'prop-types';
 import React from "react";
 import css from './ContactList.module.css'
 
-export const ContactList  = ({ data, onDeleteConcat }) => {
+export const ContactList = ({ data, onDeleteConcat }) => {
+
     return <ul className={css.list}>
           {
             data.map(contact => {
@@ -13,4 +15,9 @@ export const ContactList  = ({ data, onDeleteConcat }) => {
             })
 }
         </ul>
+}
+
+ContactList.propTypes = {
+  data: PropTypes.array,
+  onDeleteConcat: PropTypes.func
 }

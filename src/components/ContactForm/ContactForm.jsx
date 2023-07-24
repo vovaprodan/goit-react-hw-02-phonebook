@@ -1,7 +1,12 @@
 import React, { Component } from "react";
 import css from './ContactForm.module.css'
+import PropTypes from 'prop-types';
 
 class ContactForm extends Component {
+
+    static propTypes = {
+     onSubmit: PropTypes.func.isRequired,
+    };
 
     state = {
   name: '',

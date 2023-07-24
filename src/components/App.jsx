@@ -12,9 +12,9 @@ class App extends Component {
 
   state = {
     contacts: [],
-  filter: '',
-  name: '',
-  number: ''
+    filter: '',
+    name: '',
+    number: ''
   }
   changeFilter = e => {
 this.setState({filter: e.currentTarget.value})
@@ -41,8 +41,7 @@ this.setState({filter: e.currentTarget.value})
     const normalisFilter = this.state.filter.toLowerCase();
     const filterContacts = this.state.contacts.filter(
       contact => contact.name.toLowerCase().includes(normalisFilter)
-    )
-
+     )
     return (
     
       <div className={css.div}>
